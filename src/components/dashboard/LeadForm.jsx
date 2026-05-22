@@ -11,13 +11,27 @@ export default function LeadForm({ onAddLead, darkMode }) {
     university: 'Chitkara University'
   });
 
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email) {
-      alert('Please fill in all fields');
+    setError('');
+    setSuccess('');
+
+    if (!formData.name.trim() || !formData.email.trim()) {
+      setError('Name and Email are required fields.');
       return;
     }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setError('Please enter a valid email address.');
+      return;
+    }
+
     onAddLead(formData);
+    setSuccess('Lead added successfully! ✨');
     setFormData({
       name: '',
       email: '',
@@ -25,6 +39,10 @@ export default function LeadForm({ onAddLead, darkMode }) {
       status: 'New',
       university: 'Chitkara University'
     });
+
+    setTimeout(() => {
+      setSuccess('');
+    }, 3000);
   };
 
   const inputStyle = {
@@ -43,12 +61,16 @@ export default function LeadForm({ onAddLead, darkMode }) {
       borderRadius: '16px',
       padding: '32px',
     }}>
-      <h2 style={{ marginTop: '0', marginBottom: '24px', fontSize: '20px', fontWeight: '700', display: 'flex', alignItems: 'center', gap: '8px' }}>
-        <span style={{ background: theme.gradientText, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-          Capture Lead
-        </span>
-        ⚡
-      </h2>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
+        <h2 style={{ margin: '0', fontSize: '20px', fontWeight: '700', display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <span style={{ background: theme.gradientText, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            Capture Lead
+          </span>
+          ⚡
+        </h2>
+        {error && <span style={{ color: '#ef4444', fontSize: '14px', fontWeight: '500', background: 'rgba(239, 68, 68, 0.1)', padding: '4px 12px', borderRadius: '20px' }}>{error}</span>}
+        {success && <span style={{ color: '#10b981', fontSize: '14px', fontWeight: '500', background: 'rgba(16, 185, 129, 0.1)', padding: '4px 12px', borderRadius: '20px' }}>{success}</span>}
+      </div>
       <form onSubmit={handleSubmit}>
         <div style={{
           display: 'grid',

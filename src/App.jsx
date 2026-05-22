@@ -4,13 +4,16 @@ import { getThemeStyles } from './constants/theme';
 import Header from './components/dashboard/Header';
 import KPICards from './components/dashboard/KPICards';
 import LeadForm from './components/dashboard/LeadForm';
+import WhatsAppParserSandbox from './components/dashboard/WhatsAppParserSandbox';
 import ChartsSection from './components/dashboard/ChartsSection';
 import LeadTable from './components/dashboard/LeadTable';
 import AIInsights from './components/dashboard/AIInsights';
+import ReengageModal from './components/ui/ReengageModal';
 
 export default function EduFlowAILeadDashboard() {
-  const { leads, filter, setFilter, addLead, deleteLead, changeStatus } = useLeads();
+  const { leads, filter, setFilter, addLead, addParsedLeads, deleteLead, changeStatus } = useLeads();
   const [darkMode, setDarkMode] = useState(true);
+  const [selectedReengageLead, setSelectedReengageLead] = useState(null);
   const theme = getThemeStyles(darkMode);
 
   return (
@@ -30,11 +33,12 @@ export default function EduFlowAILeadDashboard() {
           
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))', 
             gap: '32px' 
           }}>
             <LeadForm onAddLead={addLead} darkMode={darkMode} />
-            <AIInsights leads={leads} darkMode={darkMode} />
+            <WhatsAppParserSandbox onImportLeads={addParsedLeads} darkMode={darkMode} />
+            <AIInsights leads={leads} darkMode={darkMode} onReengage={setSelectedReengageLead} />
           </div>
           
           <ChartsSection leads={leads} darkMode={darkMode} />
@@ -45,6 +49,7 @@ export default function EduFlowAILeadDashboard() {
             setFilter={setFilter}
             onStatusChange={changeStatus}
             onDeleteLead={deleteLead}
+            onReengage={setSelectedReengageLead}
             darkMode={darkMode} 
           />
         </div>
@@ -66,6 +71,14 @@ export default function EduFlowAILeadDashboard() {
           </p>
         </div>
       </div>
+
+      {selectedReengageLead && (
+        <ReengageModal 
+          lead={selectedReengageLead} 
+          onClose={() => setSelectedReengageLead(null)} 
+          darkMode={darkMode} 
+        />
+      )}
     </div>
   );
 }

@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: eduflow_api
+    ports:
+      - "5000:5000"
+    restart: always
+    environment:
+      - PYTHONIOENCODING=utf-8
+      # Optional: set MongoDB Atlas URI directly in Docker environment variables if needed
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: eduflow_dashboard
+    ports:
+      - "8080:80"
+    restart: always
+    depends_on:
+      - api
+    environment:
+      - NODE_ENV=production

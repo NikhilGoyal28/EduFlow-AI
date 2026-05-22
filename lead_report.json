@@ -1,57 +1,72 @@
 {
-  "report_date": "2026-05-22T09:14:55.513558",
+  "report_date": "2026-05-23T00:45:44.130174",
   "performance": {
-    "timestamp": "2026-05-22T09:14:55.469513",
-    "total_leads": 6,
+    "timestamp": "2026-05-23T00:45:44.130139",
+    "total_leads": 1,
     "by_source": {
-      "WhatsApp": 3,
-      "Website": 1,
-      "Facebook": 2
+      "Website": 1
     },
     "by_status": {
-      "Enrolled": 2,
-      "New": 3,
-      "Contacted": 1
+      "New": 1
     },
-    "enrollment_rate": 33.33,
-    "conversion_rate": 33.33,
-    "at_risk_count": 4,
+    "enrollment_rate": 0.0,
+    "conversion_rate": 0.0,
+    "at_risk_count": 1,
+    "avg_propensity": 2,
+    "model_accuracy": 100.0,
+    "feature_importances": {
+      "days_inactive": 0.4046598276535298,
+      "status_ord": 0.35642449575336094,
+      "messages": 0.2183473478013635,
+      "source_WhatsApp": 0.01029056559058807,
+      "source_Website": 0.007620948963867704,
+      "source_Facebook": 0.002656814237290022
+    },
+    "ml_insights": [
+      {
+        "icon": "\ud83e\udde0",
+        "title": "Model Confidence: 100%",
+        "desc": "Trained on 37 data points. Top predictive signal: 'days_inactive' drives conversion most strongly.",
+        "type": "positive"
+      },
+      {
+        "icon": "\u26a0\ufe0f",
+        "title": "1 Lead Predicted to Churn",
+        "desc": "ML model flags 1 leads with <35% propensity score. Auto-ping or reassign to prevent funnel leakage.",
+        "type": "warning"
+      },
+      {
+        "icon": "\ud83d\udcca",
+        "title": "Website Leads Converting Best",
+        "desc": "Website leads show a 0% real conversion rate in your pipeline. Recommend increasing Website budget allocation.",
+        "type": "info"
+      }
+    ],
     "insights": [
-      "\ud83d\udca1 2 leads from Facebook Ads",
-      "\ud83d\udca1 1 leads from Website",
-      "\ud83d\udca1 3 leads from WhatsApp Referrals",
-      "\ud83d\udca1 Enrollment rate: 33.3%",
-      "\u26a0\ufe0f 4 leads flagged as at-risk"
+      {
+        "icon": "\ud83e\udde0",
+        "title": "Model Confidence: 100%",
+        "desc": "Trained on 37 data points. Top predictive signal: 'days_inactive' drives conversion most strongly.",
+        "type": "positive"
+      },
+      {
+        "icon": "\u26a0\ufe0f",
+        "title": "1 Lead Predicted to Churn",
+        "desc": "ML model flags 1 leads with <35% propensity score. Auto-ping or reassign to prevent funnel leakage.",
+        "type": "warning"
+      },
+      {
+        "icon": "\ud83d\udcca",
+        "title": "Website Leads Converting Best",
+        "desc": "Website leads show a 0% real conversion rate in your pipeline. Recommend increasing Website budget allocation.",
+        "type": "info"
+      }
     ]
   },
   "at_risk": [
     {
-      "name": "Arjun Gupta",
-      "source": "WhatsApp",
-      "status": "New",
-      "days_inactive": 3,
-      "action": "Send follow-up message",
-      "priority": "HIGH"
-    },
-    {
-      "name": "Rahul Verma",
+      "name": "ABC",
       "source": "Website",
-      "status": "New",
-      "days_inactive": 3,
-      "action": "Send follow-up message",
-      "priority": "HIGH"
-    },
-    {
-      "name": "Zara Khan",
-      "source": "Facebook",
-      "status": "Contacted",
-      "days_inactive": 3,
-      "action": "Send follow-up message",
-      "priority": "MEDIUM"
-    },
-    {
-      "name": "Vikram Singh",
-      "source": "Facebook",
       "status": "New",
       "days_inactive": 3,
       "action": "Send follow-up message",
@@ -60,61 +75,16 @@
   ],
   "leads": [
     {
-      "name": "Nikhil Sharma",
-      "addedDate": "2026-05-22",
-      "converted": true,
-      "email": "nikhilsharma@example.com",
-      "last_contact": "16/05/2026 14:45",
-      "messages": 2,
-      "source": "WhatsApp",
-      "status": "Enrolled"
-    },
-    {
-      "name": "Priya Singh",
-      "addedDate": "2026-05-22",
-      "converted": true,
-      "email": "priyasingh@example.com",
-      "last_contact": "17/05/2026 11:00",
-      "messages": 2,
-      "source": "WhatsApp",
-      "status": "Enrolled"
-    },
-    {
-      "name": "Arjun Gupta",
-      "addedDate": "2026-05-22",
-      "converted": false,
-      "email": "arjungupta@example.com",
-      "last_contact": "18/05/2026 16:30",
-      "messages": 2,
-      "source": "WhatsApp",
-      "status": "New"
-    },
-    {
-      "name": "Rahul Verma",
-      "addedDate": "2026-05-22",
-      "converted": false,
-      "email": "rahul@example.com",
-      "messages": 0,
+      "name": "ABC",
+      "email": "nikhilgoyal0628@gmail.com",
       "source": "Website",
-      "status": "New"
-    },
-    {
-      "name": "Zara Khan",
-      "addedDate": "2026-05-22",
-      "converted": false,
-      "email": "zara@example.com",
-      "messages": 2,
-      "source": "Facebook",
-      "status": "Contacted"
-    },
-    {
-      "name": "Vikram Singh",
-      "addedDate": "2026-05-22",
-      "converted": false,
-      "email": "vikram@example.com",
+      "status": "New",
       "messages": 0,
-      "source": "Facebook",
-      "status": "New"
+      "converted": false,
+      "addedDate": "2026-05-23",
+      "days_inactive": 3,
+      "ml_score": 2,
+      "ml_risk": true
     }
   ],
   "actions": [

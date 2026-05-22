@@ -1,0 +1,126 @@
+{
+  "report_date": "2026-05-22T09:14:55.513558",
+  "performance": {
+    "timestamp": "2026-05-22T09:14:55.469513",
+    "total_leads": 6,
+    "by_source": {
+      "WhatsApp": 3,
+      "Website": 1,
+      "Facebook": 2
+    },
+    "by_status": {
+      "Enrolled": 2,
+      "New": 3,
+      "Contacted": 1
+    },
+    "enrollment_rate": 33.33,
+    "conversion_rate": 33.33,
+    "at_risk_count": 4,
+    "insights": [
+      "\ud83d\udca1 2 leads from Facebook Ads",
+      "\ud83d\udca1 1 leads from Website",
+      "\ud83d\udca1 3 leads from WhatsApp Referrals",
+      "\ud83d\udca1 Enrollment rate: 33.3%",
+      "\u26a0\ufe0f 4 leads flagged as at-risk"
+    ]
+  },
+  "at_risk": [
+    {
+      "name": "Arjun Gupta",
+      "source": "WhatsApp",
+      "status": "New",
+      "days_inactive": 3,
+      "action": "Send follow-up message",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Rahul Verma",
+      "source": "Website",
+      "status": "New",
+      "days_inactive": 3,
+      "action": "Send follow-up message",
+      "priority": "HIGH"
+    },
+    {
+      "name": "Zara Khan",
+      "source": "Facebook",
+      "status": "Contacted",
+      "days_inactive": 3,
+      "action": "Send follow-up message",
+      "priority": "MEDIUM"
+    },
+    {
+      "name": "Vikram Singh",
+      "source": "Facebook",
+      "status": "New",
+      "days_inactive": 3,
+      "action": "Send follow-up message",
+      "priority": "HIGH"
+    }
+  ],
+  "leads": [
+    {
+      "name": "Nikhil Sharma",
+      "addedDate": "2026-05-22",
+      "converted": true,
+      "email": "nikhilsharma@example.com",
+      "last_contact": "16/05/2026 14:45",
+      "messages": 2,
+      "source": "WhatsApp",
+      "status": "Enrolled"
+    },
+    {
+      "name": "Priya Singh",
+      "addedDate": "2026-05-22",
+      "converted": true,
+      "email": "priyasingh@example.com",
+      "last_contact": "17/05/2026 11:00",
+      "messages": 2,
+      "source": "WhatsApp",
+      "status": "Enrolled"
+    },
+    {
+      "name": "Arjun Gupta",
+      "addedDate": "2026-05-22",
+      "converted": false,
+      "email": "arjungupta@example.com",
+      "last_contact": "18/05/2026 16:30",
+      "messages": 2,
+      "source": "WhatsApp",
+      "status": "New"
+    },
+    {
+      "name": "Rahul Verma",
+      "addedDate": "2026-05-22",
+      "converted": false,
+      "email": "rahul@example.com",
+      "messages": 0,
+      "source": "Website",
+      "status": "New"
+    },
+    {
+      "name": "Zara Khan",
+      "addedDate": "2026-05-22",
+      "converted": false,
+      "email": "zara@example.com",
+      "messages": 2,
+      "source": "Facebook",
+      "status": "Contacted"
+    },
+    {
+      "name": "Vikram Singh",
+      "addedDate": "2026-05-22",
+      "converted": false,
+      "email": "vikram@example.com",
+      "messages": 0,
+      "source": "Facebook",
+      "status": "New"
+    }
+  ],
+  "actions": [
+    "Re-engage 'New' leads within 24-hour SLA",
+    "Execute follow-up for accounts with inactivity flags",
+    "Update database records for converted candidates",
+    "Assign re-engagement templates to 'Interested' segment"
+  ]
+}

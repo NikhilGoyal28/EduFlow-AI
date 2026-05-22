@@ -1,0 +1,5 @@
+Flask==3.0.0
+pandas==2.1.1
+google-api-python-client==2.100.0
+pymongo==4.6.1
+dnspython==2.6.1

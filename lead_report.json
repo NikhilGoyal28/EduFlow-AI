@@ -1,38 +1,38 @@
 {
-  "report_date": "2026-05-23T00:45:44.130174",
+  "report_date": "2026-05-23T00:54:07.123570",
   "performance": {
-    "timestamp": "2026-05-23T00:45:44.130139",
-    "total_leads": 1,
+    "timestamp": "2026-05-23T00:54:07.123544",
+    "total_leads": 2,
     "by_source": {
-      "Website": 1
+      "Website": 2
     },
     "by_status": {
-      "New": 1
+      "New": 2
     },
     "enrollment_rate": 0.0,
     "conversion_rate": 0.0,
-    "at_risk_count": 1,
-    "avg_propensity": 2,
+    "at_risk_count": 2,
+    "avg_propensity": 8,
     "model_accuracy": 100.0,
     "feature_importances": {
-      "days_inactive": 0.4046598276535298,
-      "status_ord": 0.35642449575336094,
-      "messages": 0.2183473478013635,
-      "source_WhatsApp": 0.01029056559058807,
-      "source_Website": 0.007620948963867704,
-      "source_Facebook": 0.002656814237290022
+      "days_inactive": 0.40584742076347763,
+      "status_ord": 0.3657829649002537,
+      "messages": 0.20950438963987916,
+      "source_Website": 0.010568818320250417,
+      "source_WhatsApp": 0.005036185734462771,
+      "source_Facebook": 0.0032602206416764167
     },
     "ml_insights": [
       {
         "icon": "\ud83e\udde0",
         "title": "Model Confidence: 100%",
-        "desc": "Trained on 37 data points. Top predictive signal: 'days_inactive' drives conversion most strongly.",
+        "desc": "Trained on 38 data points. Top predictive signal: 'days_inactive' drives conversion most strongly.",
         "type": "positive"
       },
       {
         "icon": "\u26a0\ufe0f",
-        "title": "1 Lead Predicted to Churn",
-        "desc": "ML model flags 1 leads with <35% propensity score. Auto-ping or reassign to prevent funnel leakage.",
+        "title": "2 Leads Predicted to Churn",
+        "desc": "ML model flags 2 leads with <35% propensity score. Auto-ping or reassign to prevent funnel leakage.",
         "type": "warning"
       },
       {
@@ -46,13 +46,13 @@
       {
         "icon": "\ud83e\udde0",
         "title": "Model Confidence: 100%",
-        "desc": "Trained on 37 data points. Top predictive signal: 'days_inactive' drives conversion most strongly.",
+        "desc": "Trained on 38 data points. Top predictive signal: 'days_inactive' drives conversion most strongly.",
         "type": "positive"
       },
       {
         "icon": "\u26a0\ufe0f",
-        "title": "1 Lead Predicted to Churn",
-        "desc": "ML model flags 1 leads with <35% propensity score. Auto-ping or reassign to prevent funnel leakage.",
+        "title": "2 Leads Predicted to Churn",
+        "desc": "ML model flags 2 leads with <35% propensity score. Auto-ping or reassign to prevent funnel leakage.",
         "type": "warning"
       },
       {
@@ -71,6 +71,14 @@
       "days_inactive": 3,
       "action": "Send follow-up message",
       "priority": "HIGH"
+    },
+    {
+      "name": "Nikhil Garg",
+      "source": "Website",
+      "status": "New",
+      "days_inactive": 3,
+      "action": "Send follow-up message",
+      "priority": "HIGH"
     }
   ],
   "leads": [
@@ -83,7 +91,19 @@
       "converted": false,
       "addedDate": "2026-05-23",
       "days_inactive": 3,
-      "ml_score": 2,
+      "ml_score": 8,
+      "ml_risk": true
+    },
+    {
+      "name": "Nikhil Garg",
+      "email": "nikhil0751.be23@chitkara.edu.in",
+      "source": "Website",
+      "status": "New",
+      "messages": 0,
+      "converted": false,
+      "addedDate": "2026-05-23",
+      "days_inactive": 3,
+      "ml_score": 8,
       "ml_risk": true
     }
   ],
